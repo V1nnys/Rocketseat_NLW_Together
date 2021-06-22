@@ -69,7 +69,7 @@
     );
   }
   
-  /*====  LAYOUT ============================ */
+  
   .container {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -97,15 +97,13 @@
     width: 100%;
   }
   
-  nav {
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  main {
+    margin-top:  calc(var(--header-height) + 2rem);
   }
   
-  .logo {
+   /*====  LOGO ============================ */
+  
+   .logo {
     font: 700 1.31rem 'Poppins', sans-serif;
     color: var(--title-color);
   }
@@ -114,10 +112,18 @@
     color: var(--base-color);
   }
   
-  main {
-    margin-top: var(--header-height);
+/*====  NAVIGATION ============================ */
+
+  nav {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
-  
+
+ 
+
   /*====  HOME ============================ */
   #home {
     overflow: hidden;
