@@ -10,8 +10,13 @@
     <!-- icones -->
     <link rel="stylesheet" href="assets/icomoon/style.css">
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="css/style.css">
     <title>OriginSix</title>
+
+    
 </head>
 <body>
 
@@ -24,7 +29,7 @@
                     <li><a class="title" href="#about">Sobre</a></li>
                     <li><a class="title" href="#services">Serviços</a></li>
                     <li><a class="title" href="#testimonials">Depoimentos</a></li>
-                    <li><a class="title" href="#contant">Contato</a></li>
+                    <li><a class="title" href="#contact">Contato</a></li>
                 </ul>
             </div><!--menu-->
 
@@ -100,8 +105,102 @@
             </div><!--container grid-->
         </section><!--section services-->
 
-    </main>
+        <div class="divider-1"></div>
+        <!-- section.section#testimonials>.container.grid>header>h2 -->
+        <section class="section" id="testimonials">
+            <div class="container">
+                <header>
+                    <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+                </header>
+
+                <div class="testimonials swiper-container">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="testimonial swiper-slide">
+                            <blockquote>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde exercitationem corporis dolores nostrum cum praesentium quibus
+                                </p>
+                                <cite>
+                                    <img src="https://randomuser.me/api/portraits/women/69.jpg" alt="">
+                                    Wanessa Souza
+                                </cite>
+                            </blockquote>
+                        </div>
     
+                        <div class="testimonial swiper-slide">
+                            <blockquote>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde exercitationem corporis dolores nostrum cum praesentium quibus
+                                </p>
+                                <cite>
+                                    <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="">
+                                    Franciele Venega
+                                </cite>
+                            </blockquote>
+                        </div>
+    
+                        <div class="testimonial swiper-slide">
+                            <blockquote>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde exercitationem corporis dolores nostrum cum praesentium quibus
+                                </p>
+                                <cite>
+                                    <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="">
+                                    Lorena Ipsina
+                                </cite>
+                            </blockquote>
+                        </div>
+                    </div><!--swipe-wrapper-->
+
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                </div><!--testimonials-->
+            </div><!--container grid-->
+        </section>
+
+        <div class="divider-2"></div>
+
+        <!-- contact -->
+        <!-- section.section#contact>.container.grid -->
+
+        <section class="section" id="contact">
+            <div class="container grid">
+                <div class="text">
+                    <h2 class="title">Entre em contato com a gente!</h2>
+                    <p>Entre em contato com a Beautysalon, queremos tirar suas dúvidas, ouvir suas críticas e sugestões.</p>
+                    <a href="https://api.whatsapp.com/send?phone=+55998456754&text=Oi, gostaria de agendar um horário." 
+                    class="button2" target="_blank">
+                    <i class="icon-whatsapp"></i>Entrar em contato</a>
+                </div><!--text-->
+            </div><!--container grid-->
+
+            <div class="links">
+                <ul class="grid">
+                    <li><i class="icon-phone"></i>11 99845-6754</li>
+                    <li><i class="icon-map-pin"></i>R. Amauri Souza, 346</li>
+                    <li><i class="icon-mail"></i>contatobeautysalon.com</li>
+                </ul>
+            </div><!--links-->
+
+
+        </section>
+
+
+    </main>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <!-- main js -->
     <script src="main.js"></script>
 
 </body>
