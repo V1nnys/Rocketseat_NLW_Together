@@ -10,7 +10,7 @@ false
 
 // DOM Document Object Model
 
-/* abre e fecha meno ao clicar */
+/* abre e fecha menu ao clicar */
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll("nav .toggle")
 
@@ -43,7 +43,6 @@ window.addEventListener('scroll', function(){
     }
 })
 
-
 /* Testimonials carousel slider swiper */
 const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
@@ -68,5 +67,17 @@ scrollReveal.reveal(
     #about .image, #about .text,
     #services header, #services .card,
     #testimonials header, #testimonials .testimonials
-    #contact .text, #contact .links
+    #contact .text, #contact .links,
+    footer .brand, footer .social
     `,{interval: 100})
+
+ /* Back to top button */
+
+const backToTopButton = document.querySelector('.back-to-top')
+window.addEventListener('scroll', function(){
+    if (window.scrollY >= 560){
+        backToTopButton.classList.add('show')
+    } else {
+        backToTopButton.classList.remove('show')
+    }
+})
