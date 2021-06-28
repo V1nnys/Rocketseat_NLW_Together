@@ -1,23 +1,23 @@
 /*====  RESET ============================ */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-  
-ul{
+
+ul {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
-  
+
 img {
   width: 100%;
   height: auto;
 }
-  
+
 /*====  VARIABLES ============================ */
 :root {
   --header-height: 4.5rem;
@@ -37,13 +37,13 @@ img {
   --title-font-size: 1.875rem;
   --subtitle-font-size: 1rem;
 
-  --title-font: 'Poppins', sans-serif;
-  --body-font: 'DM Sans', sans-serif;
+  --title-font: "Poppins", sans-serif;
+  --body-font: "DM Sans", sans-serif;
 }
 
 /*====  BASE ============================ */
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -53,13 +53,13 @@ body {
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
-  
+
 .title {
   font: 700 1.875rem var(--title-font);
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
-  
+
 .button {
   background-color: var(--base-color);
   color: var(--text-color-light);
@@ -71,11 +71,11 @@ body {
   font: 500 1rem var(--body-font);
   transition: background 0.3s;
 }
-  
+
 .button:hover {
   background: var(--base-color-alt);
 }
-  
+
 .divider-1 {
   height: 1px;
   background: linear-gradient(
@@ -93,44 +93,44 @@ body {
     hsla(var(--hue), 36%, 57%, 1)
   );
 }
-  
+
 /*====  LAYOUT ============================ */
-  
+
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
-  
+
 .grid {
   display: grid;
   gap: 2rem;
 }
-  
+
 .section {
   padding: calc(5rem + var(--header-height)) 0;
 }
 
-.section .title{
+.section .title {
   margin-bottom: 1rem;
 }
 
-.section .subtitle{
+.section .subtitle {
   font-size: var(--subtitle-font-size);
 }
 
-.section header{
+.section header {
   margin-bottom: 4rem;
 }
 
-.section header strong{
+.section header strong {
   color: var(--base-color);
 }
-  
+
 #header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
   display: flex;
-  
+
   position: fixed;
   top: 0;
   left: 0;
@@ -138,26 +138,26 @@ body {
   background-color: var(--body-color);
   width: 100%;
 }
-  
-#header.scroll{
-  box-shadow: 0px 0px 12px rgba(0,0,0,0.15);
+
+#header.scroll {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 }
-  
- /*====  LOGO ============================ */
-  
+
+/*====  LOGO ============================ */
+
 .logo {
   font: 700 1.31rem var(--title-font);
   color: var(--title-color);
 }
-  
+
 .logo span {
-    color: var(--base-color);
+  color: var(--base-color);
 }
 
-.logo-alt span{
-  color: var(--body-color)
+.logo-alt span {
+  color: var(--body-color);
 }
-  
+
 /*====  NAVIGATION ============================ */
 
 nav {
@@ -168,23 +168,22 @@ nav {
   width: 100%;
 }
 
-
-nav ul li{
+nav ul li {
   text-align: center;
 }
 
-nav ul li a{
+nav ul li a {
   transition: color 0.2s;
   position: relative;
 }
 
 nav ul li a:hover,
-nav ul li a.active{
+nav ul li a.active {
   color: var(--base-color);
 }
 
-nav ul li a::after{
-  content: '';
+nav ul li a::after {
+  content: "";
   width: 0%;
   height: 2px;
   background-color: var(--base-color);
@@ -197,24 +196,24 @@ nav ul li a::after{
 }
 
 nav ul li a:hover::after,
-nav ul li a.active::after{
+nav ul li a.active::after {
   width: 100%;
 }
 
-nav .menu{
+nav .menu {
   opacity: 0;
   visibility: hidden;
   top: -20rem;
   transition: 0.2s;
- }
+}
 
-nav .menu ul{
+nav .menu ul {
   display: none;
 }
 
 /* mostrar menu */
 
-nav.show .menu{
+nav.show .menu {
   opacity: 1;
   visibility: visible;
 
@@ -222,7 +221,7 @@ nav.show .menu{
 
   height: 100vh;
   width: 100vw;
-  
+
   position: fixed;
   top: 0;
   left: 0;
@@ -231,55 +230,54 @@ nav.show .menu{
   place-content: center;
 }
 
-nav.show .menu ul{
+nav.show .menu ul {
   display: grid;
 }
 
-nav.show ul.grid{
+nav.show ul.grid {
   gap: 4rem;
 }
 
 /* toggle menu */
 
-.toggle{
+.toggle {
   color: var(--base-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-nav .icon-close{
+nav .icon-close {
   visibility: hidden;
   opacity: 0;
 
   position: absolute;
   top: -1.5rem;
   right: 1.5rem;
-  
+
   transition: 0.2s;
 }
 
-nav.show div.icon-close{
+nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
   top: 1.5rem;
 }
 
-
-  /*====  HOME ============================ */
+/*====  HOME ============================ */
 #home {
   overflow: hidden;
 }
-  
+
 #home .container {
   margin: 0;
 }
-  
+
 #home .image {
   position: relative;
 }
-  
+
 #home .image::before {
-  content: '';
+  content: "";
   height: 100%;
   width: 100%;
   background: var(--base-color-second);
@@ -288,47 +286,47 @@ nav.show div.icon-close{
   left: 16.7%;
   z-index: 0;
 }
-  
+
 #home .image img {
   position: relative;
   right: 2.93rem;
 }
-  
+
 #home .image img,
 #home .image::before {
   border-radius: 0.25rem;
 }
-  
+
 #home .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   text-align: center;
 }
-  
+
 #home .text h1 {
   margin-bottom: 1rem;
 }
-  
+
 #home .text p {
   margin-bottom: 2rem;
 }
-  
+
 /*====  ABOUT ============================ */
 
-#about{
+#about {
   background-color: white;
 }
 
 #about .container {
   margin: 0;
 }
-  
+
 #about .image {
   position: relative;
 }
-  
+
 #about .image::before {
-  content: '';
+  content: "";
   height: 100%;
   width: 100%;
   background: var(--base-color-second);
@@ -337,16 +335,16 @@ nav.show div.icon-close{
   left: -33%;
   z-index: 0;
 }
-  
+
 #about .image img {
   position: relative;
 }
-  
+
 #about .image img,
 #about .image::before {
   border-radius: 0.25rem;
 }
-  
+
 #about .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -354,61 +352,61 @@ nav.show div.icon-close{
 
 /*====  SERVICES ============================ */
 
-.cards.grid{
+.cards.grid {
   gap: 1.5rem;
 }
-  
-.card{
+
+.card {
   padding: 3.625rem 2rem;
-  box-shadow: 0px 0px 12px rgba(0,0,0,0.08);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-bottom: 0.25rem solid var(--base-color);
-  border-radius: .25rem .25rem 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
 }
 
-.card i{
+.card i {
   display: block;
   margin-bottom: 1.5rem;
   font-size: 5rem;
   color: var(--base-color);
 }
 
-.card .title{
+.card .title {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
 }
 
 /*====  TESTIMONIALS ============================ */
 
-#testimonials{
+#testimonials {
   background: white;
 }
 
-#testimonials .container{
+#testimonials .container {
   margin-left: 0;
   margin-right: 0;
 }
 
-#testimonials header{
+#testimonials header {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 0;
 }
 
-#testimonials blockquote{
+#testimonials blockquote {
   padding: 2rem;
-  box-shadow: 0px 0px 12px rgba(0,0,0,0.08);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-radius: 0.25rem;
 }
 
-#testimonials blockquote p{
+#testimonials blockquote p {
   position: relative;
   text-indent: 1.875rem;
   margin-bottom: 1.5rem;
   color: var(--title-color);
 }
 
-#testimonials blockquote p span{
+#testimonials blockquote p span {
   font: 700 2.5rem serif;
   position: absolute;
   top: -0.375rem;
@@ -416,13 +414,13 @@ nav.show div.icon-close{
   color: var(--base-color);
 }
 
-#testimonials cite{
+#testimonials cite {
   display: flex;
   align-items: center;
   font-style: normal;
 }
 
-#testimonials cite img{
+#testimonials cite img {
   width: 2rem;
   height: 2rem;
   object-fit: cover;
@@ -432,18 +430,18 @@ nav.show div.icon-close{
 
 /* swiper */
 
-.swiper-slide{
+.swiper-slide {
   height: auto;
   padding: 4rem 1rem;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background-color: var(--base-color);
 }
 
 /*====  contact ============================ */
 
-#contact .grid{
+#contact .grid {
   gap: 4rem;
 }
 
@@ -455,7 +453,7 @@ nav.show div.icon-close{
   align-items: center;
   padding: 0 2rem;
   border-radius: 0.25rem;
-  font: 500 1rem 'DM Sans', sans-serif;
+  font: 500 1rem "DM Sans", sans-serif;
   transition: background 0.3s;
   margin-bottom: 3rem;
 }
@@ -470,69 +468,68 @@ nav.show div.icon-close{
   margin-right: 0.625rem;
 }
 
-#contact .text p{
+#contact .text p {
   margin-bottom: 2rem;
 }
 
 #contact .button i,
-#contact ul li i{
+#contact ul li i {
   font-size: 1.5rem;
   margin-right: 0.625rem;
 }
 
-#contact ul.grid{
+#contact ul.grid {
   gap: 2rem;
 }
 
-#contact ul li{
+#contact ul li {
   display: flex;
   align-items: center;
 }
 
-#contact ul li i{
+#contact ul li i {
   color: var(--base-color);
 }
 
-
 /*====  contact ============================ */
 
-footer{
+footer {
   background-color: var(--base-color);
 }
 
-footer.section{
+footer.section {
   padding: 4rem 0;
 }
 
-footer .logo{
+footer .logo {
   display: inline-block;
   margin-bottom: 1.5rem;
 }
 
-footer .brand p{
+footer .brand p {
   color: var(--text-color-light);
   margin-bottom: 0.75rem;
 }
 
-footer i{
+footer i {
   font-size: 1.5rem;
   color: var(--text-color-light);
 }
 
-footer .social a{
+footer .social a {
   margin-right: 2rem;
   transition: 0.3s;
   display: inline-block;
-   /* esse efeito hover só deu certo por esse display: inline-block */
+  /* esse efeito hover só deu certo por esse display: inline-block */
 }
 
-footer .social a:hover{
+footer .social a:hover {
   transform: translateY(-8px);
 }
 
 /* back to top */
 
-.back-to-top{
+.back-to-top {
   background-color: var(--base-color);
   color: var(--text-color-light);
 
@@ -553,142 +550,137 @@ footer .social a:hover{
   transform: translateY(100%);
 }
 
-.back-to-top.show{
+.back-to-top.show {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
 
-
 /* =================  MEDIA QUERIES  ======================== */
 
 /* extra large devices: 1200 > */
-@media (min-width: 1200px){
-
-  .container{
+@media (min-width: 1200px) {
+  .container {
     max-width: 1120px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .section{
+  .section {
     padding: 10rem 0;
   }
 
   .section header,
-  #testimonials header{
+  #testimonials header {
     max-width: 32rem;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .button{
+  .button {
     height: 3.125rem;
   }
 
-  nav.menu{
+  nav.menu {
     opacity: 1;
     visibility: visible;
     top: 0;
     padding-left: 30rem;
   }
 
-  nav .menu ul{
+  nav .menu ul {
     display: flex;
     gap: 2rem;
   }
 
-  nav .icon-menu{
+  nav .icon-menu {
     display: none;
-  }  
+  }
 
-  nav .menu  ul li a.title{
+  nav .menu ul li a.title {
     font: 400 1rem var(--body-font);
     -webkit-font-smoothing: antialiased;
   }
 
-  nav ul li a.active{
+  nav ul li a.active {
     font-weight: bold;
     -webkit-font-smoothing: auto;
   }
 
   main {
-    margin-top:  var(--header-height);
+    margin-top: var(--header-height);
   }
 
   /* 'order' nos elementos só funciona por estar dentro de uma caixa grid */
-  
-  #home .container{
+
+  #home .container {
     grid-auto-flow: column;
     justify-content: space-between;
     margin: 0 auto;
   }
-  
-  #home .image{
+
+  #home .image {
     order: 1;
   }
 
-  #home .text{
+  #home .text {
     order: 0;
     max-width: 24rem;
     text-align: left;
   }
 
-  #about .container{
+  #about .container {
     margin: 0 auto;
     grid-auto-flow: column;
   }
 
-  .cards{
+  .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
   /* acima um espaço é fracionado em 3. É possível manipular
   o tamanho de cada fração alterando 1fr */
 
-  .card{
+  .card {
     padding-left: 3rem;
     padding-right: 3rem;
   }
 
-  #testimonials .container{
+  #testimonials .container {
     margin-left: auto;
     margin-right: auto;
   }
- 
 
-  #contact .container{
+  #contact .container {
     grid-auto-flow: column;
   }
 
-  #contact .text{
+  #contact .text {
     max-width: 25rem;
     margin: 0 auto;
   }
 
-  #contact .links{
+  #contact .links {
     display: flex;
     flex-wrap: wrap;
   }
 
-  footer .container{
+  footer .container {
     grid-auto-flow: column;
     align-items: center;
     justify-content: space-between;
   }
 
-  footer .logo{
+  footer .logo {
     font-size: 2.25rem;
   }
 }
 
-
 /* large devices: 1023 > */
 /* large devices: 992 > */
 
-
-@media (min-width: 992px){
-  :root{
+@media (min-width: 992px) {
+  :root {
     --title-font-size: 2.25rem;
     --subtitle-font-size: 1.125rem;
   }
